@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- HTML Meta Tags -->
+    <title>VR Mini Mincecraft Clone</title>
+    <meta name="description" content="Een super basale VR App gemaakt met A-frame. De interactie is geïnspireerd door Minecraft. Deze aap is gemaakt voor de IT-proeverij van het Code-Café.">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://code-cafe-mini-minecraft-clone.web.app/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="VR Mini Mincecraft Clone">
+    <meta property="og:description" content="Een super basale VR App gemaakt met A-frame. De interactie is geïnspireerd door Minecraft. Deze aap is gemaakt voor de IT-proeverij van het Code-Café.">
+    <meta property="og:image" content="vrclone.png">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="code-cafe-mini-minecraft-clone.web.app">
+    <meta property="twitter:url" content="https://code-cafe-mini-minecraft-clone.web.app/">
+    <meta name="twitter:title" content="VR Mini Mincecraft Clone">
+    <meta name="twitter:description" content="Een super basale VR App gemaakt met A-frame. De interactie is geïnspireerd door Minecraft. Deze aap is gemaakt voor de IT-proeverij van het Code-Café.">
+    <meta name="twitter:image" content="/img/vrclone.png">
+   
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="/js/main.js" defer></script>
+    <title>VR Mini Minecraft Clone</title>
+</head>
+<body>
+    <h2>Wood: <span data-amount="0" class="wood"></span></h2>
+    <h2>Stone: <span data-amount="0" class="stone" ></span></h2>
+    <h4>Link to stone resource: <a href="http://www.freepik.com">Designed by 0melapics / Freepik</a></h4>
+    <h4>Link to sword and axe resource: <a href="http://www.freepik.com">Designed by Freepik</a></h4>
+    <a-scene>
+        <!-- Sky gives a timelapse effect but makes text (wood and stone ) invisible -->
+        <a-camera class="camera">
+            <a-cursor color="black"></a-cursor>
+            <a-image src="/img/sword.png" class="newSwordBox"visible="false" width="3" position="1 0.5 -5"></a-image>
+            <a-image src="/img/pickaxe.png" class="newAxeBox" visible="false"  position="1 0.5 -5"></a-image>
+        </a-camera>
+
+        <!-- boxes for guessing game -->
+        <a-box class="hoverBox" color="#F8485E" position="-3 0.5 -3"></a-box>
+        <a-box class="hoverBox" color="#F8485E" position="5 0.5 -3"></a-box>
+        <a-box class="hoverBox" color="#F8485E" position="2 0.5 4"></a-box>
+        <a-box class="hoverBox" color="#F8485E" position="3 0.5 -6"></a-box>
+        <a-box class="hoverBox" color="#F8485E" position="-2 0.5 -6"></a-box>
+
+        <!-- Tree -->
+        <!-- Tree brown-->
+        <a-box class="treeBox" color="#865439" position="1 0.5 -6"></a-box>
+        <a-box class="treeBox" color="#865439" position="1 1.5 -6"></a-box>
+        <a-box class="treeBox" color="#865439" position="1 2.5 -6"></a-box>
+        <a-box class="treeBox" color="#865439" position="1 3.5 -6"></a-box>
+        <!-- Tree green -->
+        <a-box class="treeBox" color="#055052" position="1 4.5 -6"></a-box>
+        <a-box class="treeBox" color="#055052" position="0 4.5 -6"></a-box>
+        <a-box class="treeBox" color="#055052" position="-1 4.5 -6"></a-box>
+        <a-box class="treeBox" color="#055052" position="2 4.5 -6"></a-box>
+        <a-box class="treeBox" color="#055052" position="3 4.5 -6"></a-box> 
+        <a-box class="treeBox" color="#055052" position="0 5.5 -6"></a-box> 
+        <a-box class="treeBox" color="#055052" position="1 5.5 -6"></a-box> 
+        <a-box class="treeBox" color="#055052" position="2 5.5 -6"></a-box>
+
+        <!-- Sword box -->
+        <a-image src="/img/sword.png" width="3" class="swordBox" position="1 0.5 7"></a-image>
+
+        <!-- Stone -->
+        <a-box src="/img/stone.jpg" class="stoneBox"  depth="2" position="-4 1 0"></a-box>
+
+        <!-- Axe box-->
+        <a-image src="/img/pickaxe.png" class="axeBox" position="-1 0.5 3"></a-image>
+
+        <!-- Plane for ground-->
+        <a-plane width="20" height="20" position="0 0 0" color="#CDBBA7" rotation="-90 0 0"></a-plane>
+
+    </a-scene>
+</body>
+</html>
